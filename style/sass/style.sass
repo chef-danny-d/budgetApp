@@ -1,0 +1,71 @@
+@import 'variables'
+
+body
+    padding: 5% 10%
+    font-family: 'Montserrat'
+
+.cont
+    display: flex
+    justify-content: space-evenly
+
+.tile
+    border: 
+        radius: 0.5em
+        color: $primary-variant
+        width: 1.5px
+        style: solid
+    box-shadow: 3px 3px 3px 3px $black-transparent
+    background-color: $primary
+    padding: 0
+    min-height: 15vh
+    &-body
+        padding: 0
+        overflow: hidden
+        position: relative 
+        width: 100%
+    &-header
+        text-align: center
+        color: $white
+    &-number
+        color: $white  
+        text-align: center
+        
+    &-icon
+        position: absolute
+        right: -1.5em
+        bottom: -1.5em
+        height: 5em
+        width: 5em
+        float: right
+        color: $primary-50
+        opacity: 0.3
+
+.form
+    &-wrapper
+        padding-top: 3em
+        display: flex
+        justify-content: space-evenly
+    &-group
+        display: flex
+        flex-direction: column
+        min-height: 25vh
+        &-label
+            padding-top: 0.5em
+        &-input
+            
+        &-button
+            margin-top: auto
+            border: 
+                radius: 0
+            &.add
+                border-color: $secondary
+                background-color: $secondary
+                color: $black
+            &.sub
+                border-color: $error
+                background-color: $error
+                color: $white
+        
+
+
+@import 'import'
