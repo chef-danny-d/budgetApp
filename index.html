@@ -16,7 +16,7 @@
   <body>
     
     <div class="container"> <!-- main contrain for the entire site -->
-        <div class="row mx-auto cont"><!-- wrapper for all -->
+        <div class="row mx-auto cont"><!-- wrapper for all cards-->
             <div class="col-md-3 tile card ml-1"><!-- budget tile starting -->
                 <div class="card-body tile-body"><!-- tile body -->
                     <i data-feather="dollar-sign" class="tile-icon"></i>
@@ -25,6 +25,7 @@
                     </h3>
                     <p class="card-text tile-number" id="budget">
                         <!-- we are putting data in here using javascript -->
+                        <span id="budget-amount">0</span>
                     </p>
                 </div><!-- / title body -->
             </div><!-- / budget title -->
@@ -33,10 +34,10 @@
                 <div class="card-body tile-body">
                     <i data-feather="credit-card" class="tile-icon"></i>
                     <h3 class="card-title tile-header">
-                        Income
+                        Expense
                     </h3>
-                    <p class="card-text tile-number" id="income">
-                        
+                    <p class="card-text tile-number" id="expense">
+                        <span id="expense-amount">0</span>
                     </p>
                 </div>
             </div>
@@ -48,25 +49,56 @@
                         Balance
                     </h3>
                     <p class="card-text tile-number" id="balance">
-
+                        <span id="balance-amount">0</span>
                     </p>
                 </div>
             </div>
         </div>
         <div class="row form-wrapper">
-            <div class="form-group col-md-5">
+            <div class="budget-feedback alert alert-danger text-capitalize col-md-12"></div>
+            <form class="form-group col-md-5" id="budget-form">
                 <label class="form-group-label" for="Budget">Budget</label>
-                <input type="text" name="" id="" class="form-control form-group-input" placeholder="Enter your budget" aria-describedby="helpId">
+                <input type="number" id="budget-input" class="form-control form-group-input" placeholder="Enter your budget" aria-describedby="helpId">
 
-                <a name="" id="" class="btn btn-primary form-group-button add" href="#" role="button">Add Budget</a>
-            </div>
-            <div class="form-group col-md-5">
+                <button type="submit" class="btn btn-primary form-group-button add budget-submit" id="budget-submit" href="#" role="button">Add Budget</button>
+            </form>
+            <div class="expense-feedback alert alert-danger text-capitalize col-md-12"></div>
+            <form class="form-group col-md-5" id="expense-form">
                 <label class="form-group-label" for="Expense">Expense Lable</label>
-                <input type="text" name="" id="" class="form-control form-group-input" placeholder="Enter your expense name" aria-describedby="helpId">
+                <input type="text" id="expense-input" class="form-control form-group-input" placeholder="Enter your expense name" aria-describedby="helpId">
 
                 <label class="form-group-label" for="Expense">Expense Amount</label>
-                <input type="text" name="" id="" class="form-control form-group-input" placeholder="Enter your expense amount" aria-describedby="helpId">
-                <a name="" id="" class="btn btn-primary form-group-button sub" href="#" role="button">Add Expense</a>
+                <input type="number" id="amount-input" class="form-control form-group-input" placeholder="Enter your expense amount" aria-describedby="helpId">
+                <button type="submit" class="btn btn-primary form-group-button sub expense-submit" id="expense-submit" href="#" role="button">Add Expense</button>
+            </form>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-12">
+                <!-- expense list -->
+                <div class="expense-list" id="expense-list">
+                    <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                        <h5 class="list-item">expense title</h5>
+                        <h5 class="list-item">expense value</h5>
+                        <h5 class="list-item">action</h5>
+                    </div>
+                    <!-- single expense -->
+            
+                    <div class="expense">
+                        <div class="expense-item d-flex justify-content-between align-items-baseline">
+                            <h6 class="expense-title mb-0 text-uppercase list-item"></h6>
+                            <h5 class="expense-amount mb-0 list-item"></h5>
+                        <div class="expense-icons list-item">
+                            <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
+                                <i data-feather="edit" class="tile-icon"></i>
+                            </a>
+                            <a href="#" class="delete-icon" data-id="${expense.id}">
+                                <i data-feather="trash" class="tile-icon"></i>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                <!-- end of single expense -->
+                </div>
             </div>
         </div>
     </div>

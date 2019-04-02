@@ -45,6 +45,7 @@ body
         padding-top: 3em
         display: flex
         justify-content: space-evenly
+        position: relative
     &-group
         display: flex
         flex-direction: column
@@ -66,6 +67,11 @@ body
                 background-color: $error
                 color: $white
         
+.alert
+    display: none
 
+.showItem
+    display: block
+    text-align: center
 
 @import 'import'

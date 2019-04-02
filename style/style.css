@@ -52,6 +52,7 @@ body {
   padding-top: 3em;
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .form-group {
@@ -79,4 +80,13 @@ body {
   border-color: #b00020;
   background-color: #b00020;
   color: #ffffff;
+}
+
+.alert {
+  display: none;
+}
+
+.showItem {
+  display: block;
+  text-align: center;
 }
