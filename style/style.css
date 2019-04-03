@@ -90,3 +90,7 @@ body {
   display: block;
   text-align: center;
 }
+
+.expense-icons a:hover {
+  text-decoration: none;
+}
