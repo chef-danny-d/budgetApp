@@ -1,0 +1,28 @@
+{
+  "name": "budgetApp",
+  "version": "1.0.0",
+  "description": "vanilla js budgeting web application",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chef-danny-d/budgetApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chef-danny-d/budgetApp/issues"
+  },
+  "homepage": "https://github.com/chef-danny-d/budgetApp#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "feather-icons": "^4.28.0"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}

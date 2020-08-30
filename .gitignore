@@ -29,6 +29,9 @@ node_modules
 
 
 \.DS_Store
+.idea/*
+.cache/*
+dist/*
 
 style/_*\.css
 style/_*\.min\.css
